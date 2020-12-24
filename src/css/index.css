@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    margin: auto 1rem;
+    grid-template-areas: 
+        "header"
+        "section"
+        "footer";
+    align-content: space-between;
+}
+
+
+.nf-header {
+    grid-area: header;
+    height: 4rem;
+}
+
+.nf-header>p {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 4rem;
+    margin: 0;
+}
+
+
+.nf-section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,5fr));
+    align-items: center;
+}
+
+.nf-img{
+    width: 100%;
+}
+
+.nf-content{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.nf-title{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.nf-p{
+    margin-top: 2rem;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.nf-back-button{
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #FFFFFF;
+    
+    height: 3rem;
+    width: 12rem;
+    margin-top: 2rem;
+    background-color: #364f6b;
+
+}
+
+.nf-footer{
+    grid-area: footer;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .nf-section {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(auto-fit, auto);
+        align-items: center;
+    }
+    
+    .nf-header{
+        text-align: center;
+    }    
+}
+
+@media screen and (max-width: 1024px){
+    
+    .nf-title{
+        font-size: 2em;
+    }
+    
+    .nf-p{
+        font-size: 1.3em;
+    }
+    
+}
