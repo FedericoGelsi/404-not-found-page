@@ -32,7 +32,7 @@
 
 ## Overview
 
-![screenshot](./src/assets/images/preview.jpg)
+![screenshot](./src/assets/images/preview.png)
 
 ### Built With
 
